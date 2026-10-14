@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounceGentle {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-3px) scale(1.02); }
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@keyframes zombieWalk {
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  25% { transform: translateY(-2px) rotate(1deg); }
+  50% { transform: translateY(0px) rotate(-2deg); }
+  75% { transform: translateY(-2px) rotate(1deg); }
+}
+
+@keyframes eatShake {
+  0%, 100% { transform: translateX(0px); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
+
+@keyframes vault {
+  0% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-60px) scale(1.2); }
+  100% { transform: translateY(0px) scale(1); }
+}
+
+@keyframes vibrate {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes pingFast {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.9; }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 12s linear infinite;
+}
+
+.animate-bounce-gentle {
+  animation: bounceGentle 1.8s ease-in-out infinite;
+}
+
+.animate-sway {
+  animation: sway 3s ease-in-out infinite;
+}
+
+.animate-zombie-walk {
+  animation: zombieWalk 1.4s ease-in-out infinite;
+}
+
+.animate-eat-shake {
+  animation: eatShake 0.2s ease-in-out infinite;
+}
+
+.animate-vault {
+  animation: vault 0.8s ease-in-out forwards;
+}
+
+.animate-vibrate {
+  animation: vibrate 0.1s ease-in-out infinite;
+}
+
+.animate-ping-fast {
+  animation: pingFast 0.4s ease-out forwards;
+}
+
+/* Fast Forward 2x Animation Overrides */
+.game-fast-forward .animate-spin-slow {
+  animation-duration: 6s;
+}
+.game-fast-forward .animate-bounce-gentle {
+  animation-duration: 0.9s;
+}
+.game-fast-forward .animate-sway {
+  animation-duration: 1.5s;
+}
+.game-fast-forward .animate-zombie-walk {
+  animation-duration: 0.7s;
+}
+.game-fast-forward .animate-eat-shake {
+  animation-duration: 0.1s;
+}
+.game-fast-forward .animate-vault {
+  animation-duration: 0.4s;
+}
+.game-fast-forward .animate-vibrate {
+  animation-duration: 0.05s;
+}
+.game-fast-forward .animate-ping-fast {
+  animation-duration: 0.2s;
+}
+
+/* PvZ Main Menu Subtle Yellow & White Glow */
+.menu-tombstone-glow {
+  position: relative;
+  transition: all 0.15s ease-out;
+}
+
+.menu-tombstone-glow:hover,
+.menu-tombstone-glow:focus-visible {
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.25) 0%, rgba(254, 240, 138, 0.2) 50%, transparent 85%);
+  box-shadow: 
+    0 0 12px 2px rgba(253, 224, 71, 0.35),
+    inset 0 0 8px 1px rgba(255, 255, 255, 0.3);
+  border-color: rgba(254, 240, 138, 0.45) !important;
+}
+
+.menu-tombstone-glow:active {
+  transform: scale(0.98);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(254, 240, 138, 0.28) 55%, transparent 90%);
+  box-shadow: 
+    0 0 16px 4px rgba(253, 224, 71, 0.45),
+    inset 0 0 12px 2px rgba(255, 255, 255, 0.4);
+}
+
+/* Custom PvZ Amber & Stone Scrollbars */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c1917;
+  border: 1px solid #44403c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #78350f;
+  border: 2px solid #292524;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b45309;
+}

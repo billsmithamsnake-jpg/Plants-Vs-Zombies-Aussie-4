@@ -1,0 +1,6 @@
+{
+  "name": "Plants vs. Zombies",
+  "description": "A Plants vs. Zombies 1 game clone with full gameplay mechanics, level selection, plant seed choices, zombies, lawn mowers, sun collection, and retro sound effects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
